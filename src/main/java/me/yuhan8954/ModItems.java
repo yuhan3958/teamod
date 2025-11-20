@@ -49,7 +49,7 @@ public class ModItems {
         return item;
     }
 
-    public static final Item TEA_LEAVES = register("tea_leaves",
+    public static final Item TEA_LEAVES = register("tea_leaves", //fresh
             Item::new,
             new Item.Properties()
                     .food(new FoodProperties.Builder().nutrition(2).saturationModifier(1f).alwaysEdible().build()));

@@ -1,5 +1,6 @@
 package me.yuhan8954;
 
+import me.yuhan8954.block.ModBlocks;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -21,6 +22,6 @@ public class Teamod implements ModInitializer {
 
 		LOGGER.info("茶!");
         ModItems.initialize();
-
+        ModBlocks.initialize();
 	}
 }
