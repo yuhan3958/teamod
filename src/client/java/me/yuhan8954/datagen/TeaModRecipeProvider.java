@@ -1,5 +1,6 @@
 package me.yuhan8954.datagen;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 import me.yuhan8954.ModItems;
@@ -27,8 +28,20 @@ public class TeaModRecipeProvider extends FabricRecipeProvider {
                         .pattern("# #")
                         .pattern("# #")
                         .pattern(" # ")
+                        .unlockedBy("has_clay", has(Items.CLAY_BALL))
                         .define('#', Items.CLAY_BALL)
                         .save(output);
+
+                shaped(RecipeCategory.MISC, ModItems.UNF_TEA_POT, 1)
+                        .pattern(" # ")
+                        .pattern("# #")
+                        .pattern("###")
+                        .unlockedBy("has_clay", has(Items.CLAY_BALL))
+                        .define('#', Items.CLAY_BALL)
+                        .save(output);
+
+                oreSmelting(List.of(ModItems.UNF_TEA_CUP), RecipeCategory.MISC, ModItems.TEA_CUP, 0.3f, 200, "teacup");
+                oreSmelting(List.of(ModItems.UNF_TEA_POT), RecipeCategory.MISC, ModItems.TEA_POT, 0.3f, 200, "teapot");
             }
         };
     }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "teamod:tea_pot_from_smelting_unfired_tea_pot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_unfired_tea_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teamod:unfired_tea_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_unfired_tea_pot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teamod:tea_pot_from_smelting_unfired_tea_pot"
+    ]
+  }
+}

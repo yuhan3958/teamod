@@ -25,6 +25,14 @@ public class ModItems {
                 .register((itemGroup) -> itemGroup.accept(ModItems.TEA_CUP));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
                 .register((itemGroup) -> itemGroup.accept(ModItems.TEA_CUP));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_POT));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_POT));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((itemGroup) -> itemGroup.accept(ModItems.TEA_POT));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
+                .register((itemGroup) -> itemGroup.accept(ModItems.TEA_POT));
 
         CompostingChanceRegistry.INSTANCE.add(ModItems.TEA_LEAVES, 1f);
     }
@@ -48,4 +56,6 @@ public class ModItems {
 
     public static final Item UNF_TEA_CUP = register("unfired_tea_cup", Item::new, new Item.Properties());
     public static final Item TEA_CUP = register("tea_cup", Item::new, new Item.Properties());
+    public static final Item UNF_TEA_POT = register("unfired_tea_pot", Item::new, new Item.Properties());
+    public static final Item TEA_POT = register("tea_pot", Item::new, new Item.Properties());
 }

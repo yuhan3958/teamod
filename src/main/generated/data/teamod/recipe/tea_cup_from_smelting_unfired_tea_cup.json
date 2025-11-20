@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.3,
+  "group": "teacup",
+  "ingredient": "teamod:unfired_tea_cup",
+  "result": {
+    "id": "teamod:tea_cup"
+  }
+}
