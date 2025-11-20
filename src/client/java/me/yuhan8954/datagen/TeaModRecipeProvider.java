@@ -3,7 +3,7 @@ package me.yuhan8954.datagen;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import me.yuhan8954.ModItems;
+import me.yuhan8954.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;

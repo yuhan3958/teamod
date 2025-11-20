@@ -18,9 +18,7 @@ import java.util.function.Function;
 
 public class ModBlocks {
     public static void initialize() {
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(entries -> {
-            entries.accept(ModBlocks.TEA_PLANT.asItem());
-        });
+
     }
 
     private static Block register(String name,

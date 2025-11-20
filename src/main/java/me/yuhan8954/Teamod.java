@@ -1,6 +1,7 @@
 package me.yuhan8954;
 
 import me.yuhan8954.block.ModBlocks;
+import me.yuhan8954.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;

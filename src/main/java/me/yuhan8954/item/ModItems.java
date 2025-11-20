@@ -1,5 +1,6 @@
-package me.yuhan8954;
+package me.yuhan8954.item;
 
+import me.yuhan8954.Teamod;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.minecraft.core.Registry;
@@ -58,4 +59,10 @@ public class ModItems {
     public static final Item TEA_CUP = register("tea_cup", Item::new, new Item.Properties());
     public static final Item UNF_TEA_POT = register("unfired_tea_pot", Item::new, new Item.Properties());
     public static final Item TEA_POT = register("tea_pot", Item::new, new Item.Properties());
+
+    public static final Item TEA_SEED = register(
+            "tea_seed",
+            TeaSeedItem::new,
+            new Item.Properties()
+    );
 }
