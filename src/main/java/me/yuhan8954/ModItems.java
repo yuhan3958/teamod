@@ -8,7 +8,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 
@@ -19,9 +18,9 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
                 .register((itemGroup) -> itemGroup.accept(ModItems.TEA_LEAVES));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
-                        .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_CUP));
+                .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_CUP));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
-                        .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_CUP));
+                .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_CUP));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
                 .register((itemGroup) -> itemGroup.accept(ModItems.TEA_CUP));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
