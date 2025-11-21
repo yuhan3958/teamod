@@ -65,7 +65,6 @@ public class ModItems {
     public static final Item SEMI_TEA_LEAVES =
             register("semi_tea_leaves", Item::new, new Item.Properties()
                     .food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.5f).alwaysEdible().build()));
-
     public static final Item OXIDIZED_TEA_LEAVES =
             register("oxidized_tea_leaves", Item::new, new Item.Properties()
                     .food(new FoodProperties.Builder().nutrition(0).saturationModifier(0f).alwaysEdible().build()));

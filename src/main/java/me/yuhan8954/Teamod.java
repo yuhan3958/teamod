@@ -26,7 +26,7 @@ public class Teamod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("茶!");
-		LOGGER.info(String.valueOf(100/70));
+		LOGGER.info(String.valueOf(100f/70f));
 		ModItems.initialize();
 		ModBlocks.initialize();
 		registerTeaOxidationHandler();

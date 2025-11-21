@@ -1,6 +1,5 @@
 package me.yuhan8954;
 
-import me.yuhan8954.Teamod;
 import me.yuhan8954.block.ModBlocks;
 import me.yuhan8954.item.ModItems;
 
@@ -19,9 +18,6 @@ import net.minecraft.world.item.component.CustomData;
 
 import java.util.List;
 
-
-import java.util.List;
-
 public class TeamodClient implements ClientModInitializer {
 
 	private static final String OX_KEY = "oxidation_ticks";
@@ -37,12 +33,11 @@ public class TeamodClient implements ClientModInitializer {
 				int percent = (int)((ticks / (double) Teamod.FULL_OXIDATION_TICKS) * 100);
 				if (percent > 100) percent = 100;
 
-				String stage;
-				if (percent < 20) stage = "비산화";
-				else if (percent < 70) stage = "중간 산화";
-				else stage = "완전 산화";
+				if (percent < 20) tooltip.add(Component.translatable("tooltip.teamod.oxidation", (percent*50)));
+				else if (percent < 70) tooltip.add(Component.translatable("tooltip.teamod.oxidation", Math.round(((percent-20)*100f/70f))));
+				else tooltip.add(Component.translatable("tooltip.teamod.oxidation", Math.round(((percent-70)*100f/30f))));
 
-				tooltip.add(Component.literal("§a산화도: §f" + percent + "% (" + stage + ")"));
+
 			}
 		});
 	}

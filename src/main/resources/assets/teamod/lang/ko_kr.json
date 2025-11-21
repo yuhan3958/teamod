@@ -1,9 +1,12 @@
 {
-  "item.teamod.tea_leaves": "찻잎",
+  "item.teamod.tea_leaves": "싱싱한 찻잎",
+  "item.teamod.semi_tea_leaves": "약간 산화된 찻잎",
+  "item.teamod.oxidized_tea_leaves": "산화된 찻잎",
   "item.teamod.unfired_tea_cup": "굽지 않은 찻잔",
   "item.teamod.tea_cup": "찻잔",
   "item.teamod.tea_pot": "찻주전자",
   "item.teamod.unfired_tea_pot": "굽지 않은 찻주전자",
   "item.teamod.tea_seed": "차 씨앗",
-  "block.teamod.tea_plant": "차 나무"
+  "block.teamod.tea_plant": "차 나무",
+  "tooltip.teamod.oxidation": "§a산화도: §f%s%"
 }

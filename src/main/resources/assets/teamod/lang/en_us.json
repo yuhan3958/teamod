@@ -1,9 +1,12 @@
 {
-  "item.teamod.tea_leaves": "Tea leaves",
+  "item.teamod.tea_leaves": "Fresh tea leaves",
+  "item.teamod.semi_tea_leaves": "Semi oxidized tea leaves",
+  "item.teamod.oxidized_tea_leaves": "Oxidized tea leaves",
   "item.teamod.unfired_tea_cup": "Unfired tea cup",
   "item.teamod.tea_cup": "Tea cup",
   "item.teamod.tea_pot": "Tea pot",
   "item.teamod.unfired_tea_pot": "Unfired tea pot",
   "item.teamod.tea_seed": "Tea seed",
-  "block.teamod.tea_plant": "Tea plant"
+  "block.teamod.tea_plant": "Tea plant",
+  "tooltip.teamod.oxidation": "§aOxidation: §f%s%"
 }
