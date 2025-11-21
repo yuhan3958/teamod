@@ -19,6 +19,10 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
                 .register((itemGroup) -> itemGroup.accept(ModItems.TEA_LEAVES));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((itemGroup) -> itemGroup.accept(ModItems.SEMI_TEA_LEAVES));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
+                .register((itemGroup) -> itemGroup.accept(ModItems.OXIDIZED_TEA_LEAVES));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
                 .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_CUP));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
                 .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_CUP));
@@ -38,6 +42,8 @@ public class ModItems {
                         .register(itemGroup -> itemGroup.accept(ModItems.TEA_SEED));
 
         CompostingChanceRegistry.INSTANCE.add(ModItems.TEA_LEAVES, 1f);
+        CompostingChanceRegistry.INSTANCE.add(ModItems.SEMI_TEA_LEAVES, 1f);
+        CompostingChanceRegistry.INSTANCE.add(ModItems.OXIDIZED_TEA_LEAVES, 1f);
     }
     public static Item register(String name, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         // Create the item key.
@@ -56,6 +62,13 @@ public class ModItems {
             Item::new,
             new Item.Properties()
                     .food(new FoodProperties.Builder().nutrition(2).saturationModifier(1f).alwaysEdible().build()));
+    public static final Item SEMI_TEA_LEAVES =
+            register("semi_tea_leaves", Item::new, new Item.Properties()
+                    .food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.5f).alwaysEdible().build()));
+
+    public static final Item OXIDIZED_TEA_LEAVES =
+            register("oxidized_tea_leaves", Item::new, new Item.Properties()
+                    .food(new FoodProperties.Builder().nutrition(0).saturationModifier(0f).alwaysEdible().build()));
 
     public static final Item UNF_TEA_CUP = register("unfired_tea_cup", Item::new, new Item.Properties());
     public static final Item TEA_CUP = register("tea_cup", Item::new, new Item.Properties());
