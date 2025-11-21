@@ -34,6 +34,8 @@ public class ModItems {
                 .register((itemGroup) -> itemGroup.accept(ModItems.TEA_POT));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
                 .register((itemGroup) -> itemGroup.accept(ModItems.TEA_POT));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS)
+                        .register(itemGroup -> itemGroup.accept(ModItems.TEA_SEED));
 
         CompostingChanceRegistry.INSTANCE.add(ModItems.TEA_LEAVES, 1f);
     }

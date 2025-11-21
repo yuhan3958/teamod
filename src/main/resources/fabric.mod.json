@@ -3,9 +3,9 @@
 	"id": "teamod",
 	"version": "${version}",
 	"name": "Teamod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This is mod is make tea",
 	"authors": [
-		"Me!"
+		"Yuhan8954"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
