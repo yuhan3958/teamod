@@ -33,8 +33,8 @@ public class TeamodClient implements ClientModInitializer {
 				int percent = (int)((ticks / (double) Teamod.FULL_OXIDATION_TICKS) * 100);
 				if (percent > 100) percent = 100;
 
-				if (percent < 20) tooltip.add(Component.translatable("tooltip.teamod.oxidation", (percent*50)));
-				else if (percent < 70) tooltip.add(Component.translatable("tooltip.teamod.oxidation", Math.round(((percent-20)*100f/70f))));
+				if (percent < 20) tooltip.add(Component.translatable("tooltip.teamod.oxidation",  Math.round((percent*5f))));
+				else if (percent < 70) tooltip.add(Component.translatable("tooltip.teamod.oxidation", Math.round(((percent-20)*2f))));
 				else tooltip.add(Component.translatable("tooltip.teamod.oxidation", Math.round(((percent-70)*100f/30f))));
 
 

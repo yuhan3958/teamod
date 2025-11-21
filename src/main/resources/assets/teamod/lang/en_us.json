@@ -8,5 +8,5 @@
   "item.teamod.unfired_tea_pot": "Unfired tea pot",
   "item.teamod.tea_seed": "Tea seed",
   "block.teamod.tea_plant": "Tea plant",
-  "tooltip.teamod.oxidation": "§aOxidation: §f%s%"
+  "tooltip.teamod.oxidation": "§aOxidation: §f%s%%"
 }
