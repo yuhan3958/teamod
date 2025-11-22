@@ -94,9 +94,7 @@ public class Teamod implements ModInitializer {
 
 	private void setOxidationTicks(ItemStack stack, int ticks) {
 		// 기존 CUSTOM_DATA 유지하면서 해당 키만 업데이트
-		CustomData.update(DataComponents.CUSTOM_DATA, stack, (CompoundTag tag) -> {
-			tag.putInt(OX_KEY, ticks);
-		});
+		CustomData.update(DataComponents.CUSTOM_DATA, stack, (CompoundTag tag) -> tag.putInt(OX_KEY, ticks));
 	}
 
 	private void changeItem(ItemEntity entity, Item newItem, int ticks) {
