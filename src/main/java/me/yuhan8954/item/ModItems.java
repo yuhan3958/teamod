@@ -44,6 +44,7 @@ public class ModItems {
         CompostingChanceRegistry.INSTANCE.add(ModItems.TEA_LEAVES, 1f);
         CompostingChanceRegistry.INSTANCE.add(ModItems.SEMI_TEA_LEAVES, 1f);
         CompostingChanceRegistry.INSTANCE.add(ModItems.OXIDIZED_TEA_LEAVES, 1f);
+        CompostingChanceRegistry.INSTANCE.add(ModItems.TEA_SEED, 1f);
     }
     public static Item register(String name, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         // Create the item key.

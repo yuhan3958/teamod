@@ -11,5 +11,6 @@ public class TeaModDataGen implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(TeaModRecipeProvider::new);
+        pack.addProvider(TeaBlockLootTableProvider::new);
     }
 }

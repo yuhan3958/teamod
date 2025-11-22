@@ -18,8 +18,12 @@ import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 public class TeaPlantBlock extends SweetBerryBushBlock {
 
@@ -50,41 +54,78 @@ public class TeaPlantBlock extends SweetBerryBushBlock {
         return floorState.is(Blocks.FARMLAND);
     }
 
-    // 수확 상호작용
     @Override
-    protected @NotNull InteractionResult useWithoutItem(BlockState state, Level world, BlockPos pos,
-                                                        Player player, BlockHitResult hit) {
-
+    public @NotNull List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
         int age = state.getValue(AGE);
 
-        // AGE 3에서만 수확 가능
-        if (age == 3) {
-            if (!world.isClientSide()) {
 
-                // TeaMod 전용 드롭
-                ItemStack drop = new ItemStack(ModItems.TEA_LEAVES);
+        List<ItemStack> drops = super.getDrops(state, builder);
 
-                popResource(world, pos, drop);
+        if (age < 3) {
+            drops.removeIf(stack ->
+                    stack.is(ModItems.TEA_LEAVES) ||
+                            stack.is(ModItems.SEMI_TEA_LEAVES) ||
+                            stack.is(ModItems.OXIDIZED_TEA_LEAVES)
+            );
+            return drops;
+        }
 
-                // 나무 상태를 AGE 1로 되돌림
-                BlockState newState = state.setValue(AGE, 1);
-                world.setBlock(pos, newState, 2);
+        RandomSource random = RandomSource.create();
 
-                // 소리
-                world.playSound(null, pos,
-                        SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES,
-                        SoundSource.BLOCKS,
-                        1.0F,
-                        0.8F + world.getRandom().nextFloat() * 0.4F);
+        for (ItemStack stack : drops) {
+            if (stack.is(ModItems.TEA_LEAVES)) {
+                int extra = 0;
+                while (random.nextFloat() < 0.2f) {
+                    extra++;
+                }
+                stack.grow(extra); // 기존 3개 + extra
             }
+        }
 
+        return drops;
+    }
+    // 수확 상호작용
+    @Override
+    protected @NotNull InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+        int age = state.getValue(AGE);
+        if (age < 3) {
+            return InteractionResult.PASS;
+        }
+        if (!(level instanceof ServerLevel server)) {
             return InteractionResult.SUCCESS;
         }
 
-        return InteractionResult.PASS;
+        // --- 1. LootParams.Builder 생성 ---
+        LootParams.Builder lootBuilder = new LootParams.Builder(server)
+                .withParameter(LootContextParams.ORIGIN, pos.getCenter())
+                .withParameter(LootContextParams.BLOCK_STATE, state)
+                .withParameter(LootContextParams.THIS_ENTITY, player)
+                .withOptionalParameter(LootContextParams.TOOL, player.getMainHandItem());
+
+        List<ItemStack> drops = getDrops(state, lootBuilder);
+
+        RandomSource random = server.getRandom();
+
+        for (ItemStack stack : drops) {
+            if (stack.is(ModItems.TEA_LEAVES)) {
+                while (random.nextFloat() < 0.2f) {
+                    stack.grow(1);
+                }
+            }
+        }
+
+        for (ItemStack drop : drops) {
+            popResource(server, pos, drop);
+        }
+
+        server.setBlock(pos, state.setValue(AGE, 1), 2);
+
+        server.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0f, 1.0f);
+
+        return InteractionResult.SUCCESS;
     }
 
-    // Bone meal 로직 (베리 덤불은 이미 구현해서 override만 조정)
+
     @Override
     public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos pos, BlockState state) {
         return state.getValue(AGE) < 3;

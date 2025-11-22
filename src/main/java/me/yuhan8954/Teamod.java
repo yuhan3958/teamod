@@ -30,7 +30,7 @@ public class Teamod implements ModInitializer {
 		ModItems.initialize();
 		ModBlocks.initialize();
 		registerTeaOxidationHandler();
-	}
+    }
 
 	private void registerTeaOxidationHandler() {
 		ServerTickEvents.END_WORLD_TICK.register((ServerLevel world) -> {
