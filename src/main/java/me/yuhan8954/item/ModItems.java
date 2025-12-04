@@ -78,7 +78,7 @@ public class ModItems {
     public static final Item TEA_CUP = register("tea_cup", Item::new, new Item.Properties());
     public static final Item UNF_TEA_POT = register("unfired_tea_pot", Item::new, new Item.Properties());
     public static final Item TEA_POT = register("tea_pot", TeaPotItem::new, new Item.Properties().stacksTo(1));
-    public static final Item WATER_TEA_POT = register("water_tea_pot", WaterTeaPotItem::new, new Item.Properties());
+    public static final Item WATER_TEA_POT = register("water_tea_pot", WaterTeaPotItem::new, new Item.Properties().stacksTo(1));
     public static final Item TEA_SEED = register(
             "tea_seed",
             TeaSeedItem::new,

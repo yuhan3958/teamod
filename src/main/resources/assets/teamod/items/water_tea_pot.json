@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "teamod:item/tea_pot"
+    "model": "teamod:item/water_tea_pot"
   }
 }
