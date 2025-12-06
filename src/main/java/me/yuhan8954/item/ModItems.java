@@ -78,5 +78,5 @@ public class ModItems {
             TeaSeedItem::new,
             new Item.Properties()
     );
-    public static final Item HOT_WATER_TEA_POT = register("hot_water_tea_pot", Item::new, new Item.Properties());
+    public static final Item HOT_WATER_TEA_POT = register("hot_water_tea_pot", Item::new, new Item.Properties().stacksTo(1));
 }
