@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 2.0,
+  "group": "water_teapot",
+  "ingredient": "teamod:water_tea_pot",
+  "result": {
+    "id": "teamod:hot_water_tea_pot"
+  }
+}

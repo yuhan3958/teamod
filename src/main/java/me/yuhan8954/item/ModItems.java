@@ -30,16 +30,10 @@ public class ModItems {
                 .register((itemGroup) -> itemGroup.accept(ModItems.TEA_CUP));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
                 .register((itemGroup) -> itemGroup.accept(ModItems.TEA_CUP));
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
-                .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_POT));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
                 .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_POT));
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
-                .register((itemGroup) -> itemGroup.accept(ModItems.TEA_POT));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
                 .register((itemGroup) -> itemGroup.accept(ModItems.TEA_POT));
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
-                .register((itemGroup) -> itemGroup.accept(ModItems.WATER_TEA_POT));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
                 .register((itemGroup) -> itemGroup.accept(ModItems.WATER_TEA_POT));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS)
@@ -78,10 +72,11 @@ public class ModItems {
     public static final Item TEA_CUP = register("tea_cup", Item::new, new Item.Properties());
     public static final Item UNF_TEA_POT = register("unfired_tea_pot", Item::new, new Item.Properties());
     public static final Item TEA_POT = register("tea_pot", TeaPotItem::new, new Item.Properties().stacksTo(1));
-    public static final Item WATER_TEA_POT = register("water_tea_pot", WaterTeaPotItem::new, new Item.Properties().stacksTo(1));
+    public static final Item WATER_TEA_POT = register("water_tea_pot", Item::new, new Item.Properties().stacksTo(1));
     public static final Item TEA_SEED = register(
             "tea_seed",
             TeaSeedItem::new,
             new Item.Properties()
     );
+    public static final Item HOT_WATER_TEA_POT = register("hot_water_tea_pot", Item::new, new Item.Properties());
 }
