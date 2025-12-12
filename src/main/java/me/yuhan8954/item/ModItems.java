@@ -79,4 +79,8 @@ public class ModItems {
             new Item.Properties()
     );
     public static final Item HOT_WATER_TEA_POT = register("hot_water_tea_pot", Item::new, new Item.Properties().stacksTo(1));
+    public static final Item GREEN_TEA_BAG = register("green_tea_bag", Item::new, new Item.Properties().stacksTo(1));
+    public static final Item OOLONG_TEA_BAG = register("oolong_tea_bag", Item::new, new Item.Properties().stacksTo(1));
+    public static final Item BLACK_TEA_BAG = register("black_tea_bag", Item::new, new Item.Properties().stacksTo(1));
+    public static final Item TEA_BAG = register("tea_bag", Item::new, new Item.Properties());
 }
