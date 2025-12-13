@@ -1,9 +1,7 @@
 package me.yuhan8954.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-
-
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
 public class TeaModDataGen implements DataGeneratorEntrypoint {
 

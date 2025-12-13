@@ -9,6 +9,10 @@
   "item.teamod.hot_water_tea_pot": "Hot water Tea Pot",
   "item.teamod.unfired_tea_pot": "Unfired tea pot",
   "item.teamod.tea_seed": "Tea seed",
+  "item.teamod.tea_bag": "Tea bag",
+  "item.teamod.green_tea_bag": "Green Tea bag",
+  "item.teamod.oolong_tea_bag": "Oolong Tea bag",
+  "item.teamod.black_tea_bag": "Black Tea bag",
   "block.teamod.tea_plant": "Tea plant",
   "tooltip.teamod.oxidation": "§aOxidation: §f%s%%"
 }

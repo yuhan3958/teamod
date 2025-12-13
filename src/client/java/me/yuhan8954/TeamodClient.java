@@ -2,18 +2,15 @@ package me.yuhan8954;
 
 import me.yuhan8954.block.ModBlocks;
 import me.yuhan8954.item.ModItems;
-
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
-
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
-
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.CustomData;
 
 import java.util.List;

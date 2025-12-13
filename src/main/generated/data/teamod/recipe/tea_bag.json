@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:paper",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    " S ",
+    "# #",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "teamod:tea_bag"
+  }
+}

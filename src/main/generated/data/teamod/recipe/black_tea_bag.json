@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "teamod:tea_leaves",
+    "teamod:tea_leaves",
+    "teamod:tea_bag"
+  ],
+  "result": {
+    "count": 1,
+    "id": "teamod:black_tea_bag"
+  }
+}

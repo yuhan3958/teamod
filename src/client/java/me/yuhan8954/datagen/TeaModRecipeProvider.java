@@ -63,10 +63,11 @@ public class TeaModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.OXIDIZED_TEA_LEAVES), has(ModItems.OXIDIZED_TEA_LEAVES))
                         .save(output);
                 shaped(RecipeCategory.MISC, ModItems.TEA_BAG)
-                        .pattern("###")
+                        .pattern(" S ")
                         .pattern("# #")
                         .pattern("###")
                         .define('#', PAPER)
+                        .define('S', Items.STRING)
                         .unlockedBy(getHasName(PAPER), has(PAPER))
                         .save(output);
             }
