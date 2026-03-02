@@ -74,22 +74,28 @@ public class TeaModRecipeProvider extends FabricRecipeProvider {
                 shapeless(RecipeCategory.FOOD, ModItems.GREEN_TEA)
                         .requires(ModItems.GREEN_TEA_BAG)
                         .requires(ModItems.HOT_WATER_TEA_POT)
+                        .requires(ModItems.TEA_CUP)
                         .unlockedBy(getHasName(ModItems.GREEN_TEA_BAG), has(ModItems.GREEN_TEA_BAG))
                         .unlockedBy(getHasName(ModItems.HOT_WATER_TEA_POT), has(ModItems.HOT_WATER_TEA_POT))
+                        .unlockedBy(getHasName(ModItems.TEA_CUP), has(ModItems.TEA_CUP))
                         .save(output);
 
                 shapeless(RecipeCategory.FOOD, ModItems.OOLONG_TEA)
                         .requires(ModItems.OOLONG_TEA_BAG)
                         .requires(ModItems.HOT_WATER_TEA_POT)
+                        .requires(ModItems.TEA_CUP)
                         .unlockedBy(getHasName(ModItems.OOLONG_TEA_BAG), has(ModItems.OOLONG_TEA_BAG))
                         .unlockedBy(getHasName(ModItems.HOT_WATER_TEA_POT), has(ModItems.HOT_WATER_TEA_POT))
+                        .unlockedBy(getHasName(ModItems.TEA_CUP), has(ModItems.TEA_CUP))
                         .save(output);
 
                 shapeless(RecipeCategory.FOOD, ModItems.BLACK_TEA)
                         .requires(ModItems.BLACK_TEA_BAG)
                         .requires(ModItems.HOT_WATER_TEA_POT)
+                        .requires(ModItems.TEA_CUP)
                         .unlockedBy(getHasName(ModItems.BLACK_TEA_BAG), has(ModItems.BLACK_TEA_BAG))
                         .unlockedBy(getHasName(ModItems.HOT_WATER_TEA_POT), has(ModItems.HOT_WATER_TEA_POT))
+                        .unlockedBy(getHasName(ModItems.TEA_CUP), has(ModItems.TEA_CUP))
                         .save(output);
             }
         };

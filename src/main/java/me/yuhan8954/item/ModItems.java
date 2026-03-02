@@ -82,18 +82,18 @@ public class ModItems {
 
     public static final Item GREEN_TEA = register(
             "green_tea",
-            props -> new TeaItem(props, TeaType.GREEN, ModItems.TEA_CUP),
+            props -> new TeaItem(props, TeaType.GREEN, ModItems.TEA_CUP, ModItems.TEA_POT),
             new Item.Properties()
     );
 
     public static final Item OOLONG_TEA = register(
             "oolong_tea",
-            props -> new TeaItem(props, TeaType.OOLONG, ModItems.TEA_CUP),
+            props -> new TeaItem(props, TeaType.OOLONG, ModItems.TEA_CUP, ModItems.TEA_POT),
             new Item.Properties()
     );
     public static final Item BLACK_TEA = register(
             "black_tea",
-            props -> new TeaItem(props, TeaType.BLACK, ModItems.TEA_CUP),
+            props -> new TeaItem(props, TeaType.BLACK, ModItems.TEA_CUP, ModItems.TEA_POT),
             new Item.Properties()
     );
 }

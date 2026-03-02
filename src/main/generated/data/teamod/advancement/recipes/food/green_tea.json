@@ -21,6 +21,16 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
+    "has_tea_cup": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teamod:tea_cup"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "teamod:green_tea"
@@ -32,7 +42,8 @@
     [
       "has_the_recipe",
       "has_green_tea_bag",
-      "has_hot_water_tea_pot"
+      "has_hot_water_tea_pot",
+      "has_tea_cup"
     ]
   ],
   "rewards": {

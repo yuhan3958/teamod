@@ -15,11 +15,13 @@ import org.jetbrains.annotations.NotNull;
 public class TeaItem extends Item {
     private final TeaType type;
     private final Item cupItem;
+    private final Item potItem;
 
-    public TeaItem(Properties props, TeaType type, Item cupItem) {
+    public TeaItem(Properties props, TeaType type, Item cupItem, Item potItem) {
         super(props);
         this.type = type;
         this.cupItem = cupItem;
+        this.potItem = potItem;
     }
 
     @Override
@@ -64,6 +66,7 @@ public class TeaItem extends Item {
 
         // 컵 반환
         ItemStack cup = new ItemStack(cupItem);
+        ItemStack pot = new ItemStack(potItem);
 
         // 스택이 비었으면 손에 들고 있던 자리에 컵
         if (stack.isEmpty()) {
@@ -73,6 +76,11 @@ public class TeaItem extends Item {
         // 아니면 인벤에 넣고, 실패하면 드랍
         if (!player.getInventory().add(cup)) {
             player.drop(cup, false);
+        }
+
+        // pot 처리
+        if (!player.getInventory().add(pot)) {
+            player.drop(pot, false);
         }
 
         return stack;

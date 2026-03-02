@@ -3,7 +3,8 @@
   "category": "misc",
   "ingredients": [
     "teamod:green_tea_bag",
-    "teamod:hot_water_tea_pot"
+    "teamod:hot_water_tea_pot",
+    "teamod:tea_cup"
   ],
   "result": {
     "count": 1,

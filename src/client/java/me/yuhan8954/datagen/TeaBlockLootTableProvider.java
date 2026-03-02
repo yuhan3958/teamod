@@ -31,6 +31,7 @@ public class TeaBlockLootTableProvider extends FabricBlockLootTableProvider {
                         // 잎 기본 3개
                         .withPool(LootPool.lootPool()
                                 .setRolls(ConstantValue.exactly(1))
+                                .setBonusRolls(ConstantValue.exactly(0.1f))
                                 .add(LootItem.lootTableItem(ModItems.TEA_LEAVES)
                                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(3)))))
         );
