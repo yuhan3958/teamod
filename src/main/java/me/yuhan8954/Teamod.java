@@ -1,5 +1,6 @@
 package me.yuhan8954;
 
+import me.yuhan8954.LootTable.grassLootTable;
 import me.yuhan8954.block.ModBlocks;
 import me.yuhan8954.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -30,6 +31,7 @@ public class Teamod implements ModInitializer {
 		ModItems.initialize();
 		ModBlocks.initialize();
 		registerTeaOxidationHandler();
+		grassLootTable.init();
     }
 
 	private void registerTeaOxidationHandler() {
