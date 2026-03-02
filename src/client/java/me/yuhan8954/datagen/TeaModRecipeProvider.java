@@ -57,7 +57,7 @@ public class TeaModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.SEMI_TEA_LEAVES), has(ModItems.SEMI_TEA_LEAVES))
                         .save(output);
                 shapeless(RecipeCategory.FOOD, ModItems.BLACK_TEA_BAG)
-                        .requires(ModItems.TEA_LEAVES, 2)
+                        .requires(ModItems.OXIDIZED_TEA_LEAVES, 2)
                         .requires(ModItems.TEA_BAG)
                         .unlockedBy(getHasName(ModItems.TEA_BAG), has(ModItems.TEA_BAG))
                         .unlockedBy(getHasName(ModItems.OXIDIZED_TEA_LEAVES), has(ModItems.OXIDIZED_TEA_LEAVES))
@@ -69,6 +69,27 @@ public class TeaModRecipeProvider extends FabricRecipeProvider {
                         .define('#', PAPER)
                         .define('S', Items.STRING)
                         .unlockedBy(getHasName(PAPER), has(PAPER))
+                        .save(output);
+
+                shapeless(RecipeCategory.FOOD, ModItems.GREEN_TEA)
+                        .requires(ModItems.GREEN_TEA_BAG)
+                        .requires(ModItems.HOT_WATER_TEA_POT)
+                        .unlockedBy(getHasName(ModItems.GREEN_TEA_BAG), has(ModItems.GREEN_TEA_BAG))
+                        .unlockedBy(getHasName(ModItems.HOT_WATER_TEA_POT), has(ModItems.HOT_WATER_TEA_POT))
+                        .save(output);
+
+                shapeless(RecipeCategory.FOOD, ModItems.OOLONG_TEA)
+                        .requires(ModItems.OOLONG_TEA_BAG)
+                        .requires(ModItems.HOT_WATER_TEA_POT)
+                        .unlockedBy(getHasName(ModItems.OOLONG_TEA_BAG), has(ModItems.OOLONG_TEA_BAG))
+                        .unlockedBy(getHasName(ModItems.HOT_WATER_TEA_POT), has(ModItems.HOT_WATER_TEA_POT))
+                        .save(output);
+
+                shapeless(RecipeCategory.FOOD, ModItems.BLACK_TEA)
+                        .requires(ModItems.BLACK_TEA_BAG)
+                        .requires(ModItems.HOT_WATER_TEA_POT)
+                        .unlockedBy(getHasName(ModItems.BLACK_TEA_BAG), has(ModItems.BLACK_TEA_BAG))
+                        .unlockedBy(getHasName(ModItems.HOT_WATER_TEA_POT), has(ModItems.HOT_WATER_TEA_POT))
                         .save(output);
             }
         };

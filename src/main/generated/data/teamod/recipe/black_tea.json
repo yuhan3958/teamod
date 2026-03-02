@@ -2,12 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "teamod:oxidized_tea_leaves",
-    "teamod:oxidized_tea_leaves",
-    "teamod:tea_bag"
+    "teamod:black_tea_bag",
+    "teamod:hot_water_tea_pot"
   ],
   "result": {
     "count": 1,
-    "id": "teamod:black_tea_bag"
+    "id": "teamod:black_tea"
   }
 }

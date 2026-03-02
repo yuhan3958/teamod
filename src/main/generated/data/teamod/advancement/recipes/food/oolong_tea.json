@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hot_water_tea_pot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teamod:hot_water_tea_pot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_oolong_tea_bag": {
+      "conditions": {
+        "items": [
+          {
+            "items": "teamod:oolong_tea_bag"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "teamod:oolong_tea"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_oolong_tea_bag",
+      "has_hot_water_tea_pot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "teamod:oolong_tea"
+    ]
+  }
+}

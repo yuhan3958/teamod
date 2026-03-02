@@ -14,5 +14,8 @@
   "item.teamod.oolong_tea_bag": "우롱차 티백",
   "item.teamod.black_tea_bag": "홍차 티백",
   "block.teamod.tea_plant": "차 나무",
-  "tooltip.teamod.oxidation": "§a산화도: §f%s%%"
+  "tooltip.teamod.oxidation": "§a산화도: §f%s%%",
+  "item.teamod.green_tea": "녹차가 담긴 잔",
+  "item.teamod.oolong_tea": "우롱차가 담긴 잔",
+  "item.teamod.black_tea": "홍차가 담긴 잔"
 }

@@ -14,5 +14,8 @@
   "item.teamod.oolong_tea_bag": "Oolong Tea bag",
   "item.teamod.black_tea_bag": "Black Tea bag",
   "block.teamod.tea_plant": "Tea plant",
-  "tooltip.teamod.oxidation": "§aOxidation: §f%s%%"
+  "tooltip.teamod.oxidation": "§aOxidation: §f%s%%",
+  "item.teamod.green_tea": "Cup of Green Tea",
+  "item.teamod.oolong_tea": "Cup of Oolong Tea",
+  "item.teamod.black_tea": "Cup of Black Tea"
 }

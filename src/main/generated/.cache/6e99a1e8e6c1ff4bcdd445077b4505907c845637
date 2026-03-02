@@ -1,6 +1,9 @@
 // 1.21.10	-999999999-01-01T00:00:00	Teamod/TeaModRecipeProvider
+20829249133f1d253b795127ca747009beb5bb06 data/teamod/advancement/recipes/food/black_tea.json
 caf0fac00a33dcaecbee09c0b3cf4c73ff78bbad data/teamod/advancement/recipes/food/black_tea_bag.json
+8c697066695db6f98f9b4bc02e5d361191693563 data/teamod/advancement/recipes/food/green_tea.json
 6d5b74e25cac6a2b7b90162d3b65c2f02aee954b data/teamod/advancement/recipes/food/green_tea_bag.json
+a6e3e8b9987625abd8cedd53961b34ec83e16544 data/teamod/advancement/recipes/food/oolong_tea.json
 135ffb620b6db3402df7323fd9eb8f0332577f3a data/teamod/advancement/recipes/food/oolong_tea_bag.json
 5cf305a55ab8e0eef230755761aced653ab75e1c data/teamod/advancement/recipes/misc/hot_water_tea_pot_from_smelting_water_tea_pot.json
 ca396bc6387675c725fb3d098bda527174b1163e data/teamod/advancement/recipes/misc/tea_bag.json
@@ -8,9 +11,12 @@ ca396bc6387675c725fb3d098bda527174b1163e data/teamod/advancement/recipes/misc/te
 6e682160162749341f83b16df125d38c36b69748 data/teamod/advancement/recipes/misc/tea_pot_from_smelting_unfired_tea_pot.json
 382c7f917abb2a8b73a435737b0fd21037233909 data/teamod/advancement/recipes/misc/unfired_tea_cup.json
 35efffa772da90c186c3f0db20745846f22da34c data/teamod/advancement/recipes/misc/unfired_tea_pot.json
-01d115fd867f1979cb1486f3bfd01c54055a35a0 data/teamod/recipe/black_tea_bag.json
+34a643b6873e98d8edaad22e835de3719e4a7588 data/teamod/recipe/black_tea.json
+7f064596ed1329aeb1e1d0fe869adc674f1b7df8 data/teamod/recipe/black_tea_bag.json
+a7da2a11f3981efee7cb6d2e7dad61847f8a9afc data/teamod/recipe/green_tea.json
 2dc015bb4f4c64e6df95f38087d00ec4039743be data/teamod/recipe/green_tea_bag.json
 0fee8fa25a657d886f095fb375069b29367df295 data/teamod/recipe/hot_water_tea_pot_from_smelting_water_tea_pot.json
+e066a4342f397a4096b1459b6d148d85a0422208 data/teamod/recipe/oolong_tea.json
 78d017d22e9fd175ae2f36e28f687281497322d4 data/teamod/recipe/oolong_tea_bag.json
 04d371f93b0768c26b0842b8d0f0078c5ef5c611 data/teamod/recipe/tea_bag.json
 2e498e4c8c3c04c39ddbfa7131bd7a0c612e176c data/teamod/recipe/tea_cup_from_smelting_unfired_tea_cup.json

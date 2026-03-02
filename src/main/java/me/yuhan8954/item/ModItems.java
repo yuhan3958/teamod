@@ -22,12 +22,8 @@ public class ModItems {
                 .register((itemGroup) -> itemGroup.accept(ModItems.SEMI_TEA_LEAVES));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
                 .register((itemGroup) -> itemGroup.accept(ModItems.OXIDIZED_TEA_LEAVES));
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
-                .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_CUP));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
                 .register((itemGroup) -> itemGroup.accept(ModItems.UNF_TEA_CUP));
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS)
-                .register((itemGroup) -> itemGroup.accept(ModItems.TEA_CUP));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
                 .register((itemGroup) -> itemGroup.accept(ModItems.TEA_CUP));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES)
@@ -83,4 +79,21 @@ public class ModItems {
     public static final Item OOLONG_TEA_BAG = register("oolong_tea_bag", Item::new, new Item.Properties().stacksTo(1));
     public static final Item BLACK_TEA_BAG = register("black_tea_bag", Item::new, new Item.Properties().stacksTo(1));
     public static final Item TEA_BAG = register("tea_bag", Item::new, new Item.Properties());
+
+    public static final Item GREEN_TEA = register(
+            "green_tea",
+            props -> new TeaItem(props, TeaType.GREEN, ModItems.TEA_CUP),
+            new Item.Properties()
+    );
+
+    public static final Item OOLONG_TEA = register(
+            "oolong_tea",
+            props -> new TeaItem(props, TeaType.OOLONG, ModItems.TEA_CUP),
+            new Item.Properties()
+    );
+    public static final Item BLACK_TEA = register(
+            "black_tea",
+            props -> new TeaItem(props, TeaType.BLACK, ModItems.TEA_CUP),
+            new Item.Properties()
+    );
 }
